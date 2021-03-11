@@ -12,10 +12,10 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
 
-//        txt_create_account.setOnClickListener(){
-//            registrationScreen()
-//        }
-//
+        txt_create_account.setOnClickListener(){
+            registrationScreen()
+        }
+
 //        txt_forgot_password.setOnClickListener(){
 //            recoveryScreen()
 //        }
@@ -23,12 +23,12 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
-//    private fun registrationScreen(){
-//
-//        val goRegister = Intent(this, RegistrationActivity::class.java )
-//        startActivity(goRegister)
-//    }
-//
+    private fun registrationScreen(){
+
+        val goRegister = Intent(this, RegistrationActivity::class.java )
+        startActivity(goRegister)
+    }
+
 //    private fun recoveryScreen(){
 //        val recoveryPassword = Intent(this, RecoveryPasswordActivity::class.java)
 //        startActivity(recoveryPassword)

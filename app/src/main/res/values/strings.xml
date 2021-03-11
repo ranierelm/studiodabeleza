@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Studio da Beleza</string>
+    <string name="next">Próximo</string>
+    <string name="District">Bairro</string>
+    <string name="street">Rua</string>
+    <string name="number">Nº</string>
+    <string name="city">Cidade</string>
+    <string name="code_postal">CEP</string>
+    <string name="name">Nome</string>
+    <string name="phone">Telefone</string>
+    <string name="state">UF</string>
+    <string name="complement">Complemento</string>
 </resources>
