@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LoginActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_login"
+        android:scaleType="centerCrop"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_layer_gradient"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_text_credentials"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="36dp"
+        android:imeOptions="actionDone"
+        android:hint="Email"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:inputType="textEmailAddress"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:background="@drawable/bg_edittext_normal"
+        app:layout_constraintBottom_toTopOf="@+id/edit_text_password"
+        />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_text_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="36dp"
+        android:imeOptions="actionDone"
+        android:hint="Senha"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:inputType="textPassword"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:background="@drawable/bg_edittext_normal"
+        app:layout_constraintBottom_toTopOf="@+id/sign_in"
+/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="36dp"
+        android:textAllCaps="false"
+        android:text="Entrar"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="@drawable/bg_button_normal"
+        app:layout_constraintBottom_toTopOf="@+id/txt_forgot_password"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_forgot_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:text="Esqueci minha senha"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/txt_create_account"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_create_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:text="Criar conta"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
