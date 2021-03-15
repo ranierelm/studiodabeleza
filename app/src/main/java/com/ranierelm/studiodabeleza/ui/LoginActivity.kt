@@ -16,9 +16,9 @@ class LoginActivity : AppCompatActivity() {
             registrationScreen()
         }
 
-//        txt_forgot_password.setOnClickListener(){
-//            recoveryScreen()
-//        }
+        txt_forgot_password.setOnClickListener(){
+            recoveryScreen()
+        }
 
 
     }
@@ -29,9 +29,9 @@ class LoginActivity : AppCompatActivity() {
         startActivity(goRegister)
     }
 
-//    private fun recoveryScreen(){
-//        val recoveryPassword = Intent(this, RecoveryPasswordActivity::class.java)
-//        startActivity(recoveryPassword)
-//    }
+    private fun recoveryScreen(){
+        val recoveryPassword = Intent(this, RecoveryPasswordActivity::class.java)
+        startActivity(recoveryPassword)
+    }
 
 }

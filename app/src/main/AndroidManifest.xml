@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.StudioDaBeleza">
-        <activity android:name=".ui.RegistrationActivity"></activity>
+        <activity android:name=".ui.RecoveryPasswordActivity"></activity>
+        <activity android:name=".ui.RegistrationActivity" />
         <activity android:name=".ui.LoginActivity" />
         <activity android:name=".ui.SplashActivity">
             <intent-filter>

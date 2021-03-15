@@ -10,4 +10,5 @@
     <string name="phone">Telefone</string>
     <string name="state">UF</string>
     <string name="complement">Complemento</string>
+    <string name="info_recuperacao">Insira seu e-mail de cadastro para receber as instruções de recuperação de senha.</string>
 </resources>
