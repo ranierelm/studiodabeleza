@@ -11,4 +11,10 @@
     <string name="state">UF</string>
     <string name="complement">Complemento</string>
     <string name="info_recuperacao">Insira seu e-mail de cadastro para receber as instruções de recuperação de senha.</string>
+    <string name="forgot_your_password">Esqueceu sua senha?</string>
+    <string name="e_mail">E-mail</string>
+    <string name="button_forgot_password">Recuperar senha</string>
+
+
+
 </resources>
