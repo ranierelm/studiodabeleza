@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.LoginActivity">
+    tools:context=".login.LoginActivity">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="match_parent"
@@ -57,20 +57,11 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/sign_in"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="36dp"
-        android:textAllCaps="false"
         android:text="Entrar"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        android:textStyle="bold"
         android:background="@drawable/bg_button_normal"
         app:layout_constraintBottom_toTopOf="@+id/txt_forgot_password"
-
-        />
+        style="@style/button"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/txt_forgot_password"
@@ -93,10 +84,16 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_signin_google"
         />
 
-
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/button"
+        android:id="@+id/btn_signin_google"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="GOOGLE"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "582957515374",
+    "project_id": "login-cadastro-2b904",
+    "storage_bucket": "login-cadastro-2b904.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:582957515374:android:e009e5dd3435bc27d89c7f",
+        "android_client_info": {
+          "package_name": "com.ranierelm.studiodabeleza"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "582957515374-3fk4tc9d81rlsga9lpk35gbr25ib1hbb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ranierelm.studiodabeleza",
+            "certificate_hash": "0f7860e70a811b7a73d880bc3a5c6241c8415567"
+          }
+        },
+        {
+          "client_id": "582957515374-3pr3lhudndgiparbqqu8d7a8jker4sue.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlDfgyiayN1gK5MrWEpX4uhgltyrN5t6U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "582957515374-3pr3lhudndgiparbqqu8d7a8jker4sue.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

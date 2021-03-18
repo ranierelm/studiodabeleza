@@ -1,12 +1,18 @@
-package com.ranierelm.studiodabeleza.ui
+package com.ranierelm.studiodabeleza.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.ranierelm.studiodabeleza.R
+import com.ranierelm.studiodabeleza.ui.RecoveryPasswordActivity
+import com.ranierelm.studiodabeleza.ui.RegistrationActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
+
+    private EditText edit_text_credentials
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
