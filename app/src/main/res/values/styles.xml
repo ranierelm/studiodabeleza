@@ -26,4 +26,34 @@
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
     </style>
+
+    <style name="edit_email">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginStart">18dp</item>
+        <item name="android:layout_marginEnd">18dp</item>
+        <item name="android:layout_marginBottom">36dp</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:inputType">textEmailAddress</item>
+        <item name="android:paddingStart">18dp</item>
+        <item name="android:paddingEnd">18dp</item>
+        <item name="android:background">@drawable/bg_edittext_normal</item>
+    </style>
+
+    <style name="edit_password">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginStart">18dp</item>
+        <item name="android:layout_marginEnd">18dp</item>
+        <item name="android:layout_marginBottom">36dp</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:inputType">textPassword</item>
+        <item name="android:paddingStart">18dp</item>
+        <item name="android:paddingEnd">18dp</item>
+        <item name="android:background">@drawable/bg_edittext_normal</item>
+    </style>
 </resources>

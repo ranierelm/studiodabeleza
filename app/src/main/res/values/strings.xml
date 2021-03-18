@@ -14,6 +14,8 @@
     <string name="forgot_your_password">Esqueceu sua senha?</string>
     <string name="e_mail">E-mail</string>
     <string name="button_forgot_password">Recuperar senha</string>
+    <string name="lastname">Sobrenome</string>
+    <string name="password_">Senha</string>
 
 
 </resources>

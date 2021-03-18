@@ -11,6 +11,13 @@
         android:id="@+id/edit_name"
         style="@style/edittext_basic"
         android:hint="@string/name"
+        app:layout_constraintBottom_toTopOf="@id/edit_lastname"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_lastname"
+        style="@style/edittext_basic"
+        android:hint="@string/lastname"
         app:layout_constraintBottom_toTopOf="@id/edit_phone"
         tools:ignore="MissingConstraints" />
 
@@ -18,143 +25,35 @@
         android:id="@+id/edit_phone"
         style="@style/edittext_basic"
         android:hint="@string/phone"
-        app:layout_constraintBottom_toTopOf="@id/edit_code"
+        app:layout_constraintBottom_toTopOf="@id/email_cadastro"
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edit_code"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="36dp"
-        android:background="@drawable/bg_edittext_normal"
-        android:hint="@string/code_postal"
-        android:paddingStart="18dp"
-        android:paddingEnd="18dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/edit_street"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/edit_city"/>
-
+        style="@style/edit_email"
+        android:id="@+id/email_cadastro"
+        android:hint="Email"
+        app:layout_constraintBottom_toTopOf="@id/senha_cadastro"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edit_city"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="36dp"
-        android:background="@drawable/bg_edittext_normal"
-        android:hint="@string/city"
-        android:paddingStart="18dp"
-        android:paddingEnd="18dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/edit_street"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@id/edit_code" />
-
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edit_number"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="36dp"
-        android:background="@drawable/bg_edittext_normal"
-        android:hint="@string/number"
-        android:paddingStart="18dp"
-        android:paddingEnd="18dp"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/edit_state"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guidelineCenter" />
-
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edit_street"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="36dp"
-        android:background="@drawable/bg_edittext_normal"
-        android:hint="@string/street"
-        android:paddingStart="18dp"
-        android:paddingEnd="18dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/edit_district"
-        app:layout_constraintEnd_toEndOf="@+id/guidelineCenter"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edit_state"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="36dp"
-        android:background="@drawable/bg_edittext_normal"
-        android:hint="@string/state"
-        android:paddingStart="18dp"
-        android:paddingEnd="18dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@id/edit_complement"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guidelineCenter" />
-
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edit_district"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="36dp"
-        android:background="@drawable/bg_edittext_normal"
-        android:hint="@string/District"
-        android:paddingStart="18dp"
-        android:paddingEnd="18dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        app:layout_constraintBottom_toTopOf="@id/edit_complement"
-        app:layout_constraintEnd_toEndOf="@+id/guidelineCenter"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edit_complement"
-        style="@style/edittext_basic"
-        android:hint="@string/complement"
+        style="@style/edit_password"
+        android:id="@+id/senha_cadastro"
+        android:hint="@string/password_"
         app:layout_constraintBottom_toTopOf="@id/next_step"
         tools:ignore="MissingConstraints" />
 
+
+
+
     <androidx.appcompat.widget.AppCompatButton
+        style="@style/button"
         android:id="@+id/next_step"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:text="@string/next"
-        android:textSize="18sp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textAllCaps="false"
-        android:layout_marginBottom="36dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginStart="18dp"
         android:background="@drawable/bg_button_normal"
-        />
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="18dp" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineCenter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.75"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

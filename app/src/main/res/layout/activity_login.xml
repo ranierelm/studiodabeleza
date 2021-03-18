@@ -21,39 +21,17 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_credentials"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="36dp"
-        android:imeOptions="actionDone"
         android:hint="Email"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:inputType="textEmailAddress"
-        android:paddingStart="18dp"
-        android:paddingEnd="18dp"
-        android:background="@drawable/bg_edittext_normal"
         app:layout_constraintBottom_toTopOf="@+id/edit_text_password"
-        />
+        style="@style/edit_email"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_text_password"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="36dp"
-        android:imeOptions="actionDone"
         android:hint="Senha"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:inputType="textPassword"
-        android:paddingStart="18dp"
-        android:paddingEnd="18dp"
-        android:background="@drawable/bg_edittext_normal"
         app:layout_constraintBottom_toTopOf="@+id/sign_in"
-/>
+        style="@style/edit_password"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/sign_in"
