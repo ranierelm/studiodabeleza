@@ -1,10 +1,12 @@
 package com.ranierelm.studiodabeleza.ui
 
-import android.annotation.SuppressLint
+
 import android.app.ProgressDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils.isEmpty
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -12,7 +14,6 @@ import kotlinx.android.synthetic.main.activity_login.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.ktx.Firebase
 import com.ranierelm.studiodabeleza.R
 import kotlinx.android.synthetic.main.activity_registration.*
 
@@ -77,11 +78,63 @@ class RegistrationActivity : AppCompatActivity() {
         password = passwordRegister.text.toString()
 
         if(!isEmpty(firstName) && !isEmpty(lastName) && !isEmpty(email) && !isEmpty(password)){
-            Toast.makeText(this, "Informações preenchidas corretamente.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Informações preenchidas corretamente.",
+                    Toast.LENGTH_SHORT).show()
         } else{
-            Toast.makeText(this, "Complete os campos obrigatórios!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Complete os campos obrigatórios!",
+                    Toast.LENGTH_SHORT).show()
         }
 
+        mProgressBar.setMessage("Registrando Usuário...")
+        mProgressBar.show()
+
+        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this){ task ->
+            mProgressBar.hide()
+
+            if(task.isSuccessful){
+                Log.d(TAG, "CreateUserWithEmail:Success")
+
+                val userId = mAuth.currentUser.uid
+
+                //Checar se o usuário verificou o email
+                verifyEmail()
+
+                val currentUserDb = mDatabaseReference.child(userId)
+                currentUserDb.child("firstName").setValue(firstName)
+                currentUserDb.child("firstName").setValue(lastName)
+
+                //Atualizar informações no banco de dados
+                updateUserinfoandUi()
+
+            } else {
+                Log.w(TAG, "CreateUserWithEmail:Failed", task.exception)
+                Toast.makeText(this@RegistrationActivity, "Authentication failed!",
+                        Toast.LENGTH_SHORT).show()
+            }
+        }
+
+    }
+
+    private fun updateUserinfoandUi(){
+        //Iniciar a nova atividade
+        val intent = Intent(this@RegistrationActivity, HomeActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        startActivity(intent)
+    }
+
+    private fun verifyEmail(){
+        val mUser = mAuth.currentUser
+        mUser.sendEmailVerification().addOnCompleteListener(this){ task ->
+            if (task.isSuccessful){
+                Toast.makeText(this@RegistrationActivity,
+                        "Verification Email sent to"+
+                                mUser.getEmail(), Toast.LENGTH_SHORT).show()
+            } else{
+                Log.e(TAG, "SendEmailVerification", task.exception)
+                Toast.makeText(this@RegistrationActivity,
+                        "Failed to send Verification Email", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
 }
