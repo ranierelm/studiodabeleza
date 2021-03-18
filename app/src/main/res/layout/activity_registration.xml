@@ -8,38 +8,39 @@
     tools:context=".ui.RegistrationActivity">
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edit_name"
+        android:id="@+id/editName"
         style="@style/edittext_basic"
         android:hint="@string/name"
-        app:layout_constraintBottom_toTopOf="@id/edit_lastname"
+        app:layout_constraintBottom_toTopOf="@id/editLastname"
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edit_lastname"
+        android:id="@+id/editLastname"
         style="@style/edittext_basic"
         android:hint="@string/lastname"
-        app:layout_constraintBottom_toTopOf="@id/edit_phone"
+        app:layout_constraintBottom_toTopOf="@id/editPhone"
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edit_phone"
+        android:id="@+id/editPhone"
         style="@style/edittext_basic"
+        android:inputType="phone"
         android:hint="@string/phone"
-        app:layout_constraintBottom_toTopOf="@id/email_cadastro"
+        app:layout_constraintBottom_toTopOf="@id/emailRegister"
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/emailRegister"
         style="@style/edit_email"
-        android:id="@+id/email_cadastro"
         android:hint="Email"
-        app:layout_constraintBottom_toTopOf="@id/senha_cadastro"
+        app:layout_constraintBottom_toTopOf="@id/passwordRegister"
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/passwordRegister"
         style="@style/edit_password"
-        android:id="@+id/senha_cadastro"
         android:hint="@string/password_"
-        app:layout_constraintBottom_toTopOf="@id/next_step"
+        app:layout_constraintBottom_toTopOf="@id/btnRegister"
         tools:ignore="MissingConstraints" />
 
 
@@ -47,13 +48,14 @@
 
     <androidx.appcompat.widget.AppCompatButton
         style="@style/button"
-        android:id="@+id/next_step"
+        android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/bg_button_normal"
-        android:text="@string/next"
+        android:text="@string/btn_register"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="18dp" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

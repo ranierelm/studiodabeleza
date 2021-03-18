@@ -16,6 +16,7 @@
     <string name="button_forgot_password">Recuperar senha</string>
     <string name="lastname">Sobrenome</string>
     <string name="password_">Senha</string>
+    <string name="btn_register">Cadastrar</string>
 
 
 </resources>
