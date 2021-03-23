@@ -127,7 +127,7 @@ class RegistrationActivity : AppCompatActivity() {
         mUser.sendEmailVerification().addOnCompleteListener(this){ task ->
             if (task.isSuccessful){
                 Toast.makeText(this@RegistrationActivity,
-                        "Verification Email sent to"+
+                        "Email verificado "+
                                 mUser.getEmail(), Toast.LENGTH_SHORT).show()
             } else{
                 Log.e(TAG, "SendEmailVerification", task.exception)

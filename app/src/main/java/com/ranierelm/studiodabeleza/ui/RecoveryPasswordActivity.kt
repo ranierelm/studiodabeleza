@@ -9,4 +9,6 @@ class RecoveryPasswordActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recovery_password)
     }
+
+
 }

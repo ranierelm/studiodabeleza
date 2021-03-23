@@ -62,16 +62,10 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@id/btn_signin_google"
+        app:layout_constraintBottom_toBottomOf="parent"
         />
 
-    <androidx.appcompat.widget.AppCompatButton
-        style="@style/button"
-        android:id="@+id/btn_signin_google"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="GOOGLE"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
